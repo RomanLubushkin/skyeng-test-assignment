@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import {Option, Test, AppService} from './app.service';
+import {Component} from '@angular/core';
+import {AppService} from './app.service';
+import {environment} from '../environments/environment';
+
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,12 @@ import {Option, Test, AppService} from './app.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Skyeng test assignment';
+  assignment = environment.assignment === undefined ? 0 : environment.assignment;
   tests = [];
+  translations = [];
 
   constructor(private appService: AppService) {
     this.tests = this.appService.getTests();
+    this.translations = this.appService.getTranslations();
   }
 }

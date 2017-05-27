@@ -1,0 +1,5 @@
+<div>
+  <div *ngFor="let tx of translations; let i = index;" [style.display]="(i == txIndex) ? '' : 'none' ">
+    <span>{{myVal}} {{tx.word}}</span> | <span>{{tx.translation}}</span>
+  </div>
+</div>

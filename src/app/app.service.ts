@@ -1,14 +1,28 @@
 import {Injectable, EventEmitter} from '@angular/core';
 
-export class Option {
+export class TestOption {
   value: string;
   correct: boolean;
 }
 
 export class Test {
   caption: string;
-  options: Option[];
+  options: TestOption[];
 }
+
+
+export class TranslationOption {
+  word: string;
+  translation: string;
+}
+
+
+export const TRANSLATION_LIST = [
+  {word: 'Apple', translation: 'Яблоко'},
+  {word: 'Banana', translation: 'Банан'},
+  {word: 'Garlic', translation: 'Чеснок'},
+  {word: 'Tomato', translation: 'Помидор'}
+];
 
 export const TEST_LIST: Test[] = [
   {
@@ -35,6 +49,10 @@ export const TEST_LIST: Test[] = [
 export class AppService {
   answers = {};
   changesEmitter = new EventEmitter();
+
+  getTranslations(): TranslationOption [] {
+    return TRANSLATION_LIST;
+  }
 
   getTests(): Test[] {
     return TEST_LIST;

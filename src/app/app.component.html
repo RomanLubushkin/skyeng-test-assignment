@@ -1,10 +1,17 @@
-<h1>{{title}}</h1>
+<div *ngIf="assignment == 1 || assignment == 0">
+  <h1>Skyeng test assignment 1</h1>
+  <ul>
+    <li *ngFor="let test of tests">
+      <label>{{test.caption}}</label>
+      <app-select [test]="test"></app-select>
+    </li>
+  </ul>
+  <app-result></app-result>
+</div>
 
-<ul>
-  <li *ngFor="let test of tests">
-    <label>{{test.caption}}</label>
-    <app-select [test]="test"></app-select>
-  </li>
-</ul>
+<div *ngIf="assignment == 2 || assignment == 0">
+  <h1>Skyeng test assignment #2</h1>
+  <app-translations [translations]="translations"></app-translations>
+</div>
 
-<app-result></app-result>
+<a href="https://github.com/RomanLubushkin/skyeng-test-assignment"><h3>Source code on Github</h3></a>

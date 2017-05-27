@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Test, Option, AppService} from '../app.service';
+import {Test, TestOption, AppService} from '../app.service';
 
 @Component({
   selector: 'app-select',
@@ -15,7 +15,7 @@ export class SelectComponent {
   onSelect(value: String): void {
     const count = this.test.options.length;
     let correct = false;
-    let op: Option;
+    let op: TestOption;
     for (let i = 0; i < count; i++) {
       op = this.test.options[i];
       if (op.value === value && op.correct) {
