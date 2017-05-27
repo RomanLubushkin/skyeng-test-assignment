@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Option, Test, AppService} from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Skyeng test assignment';
+  tests = [];
+
+  constructor(private appService: AppService) {
+    this.tests = this.appService.getTests();
+  }
 }

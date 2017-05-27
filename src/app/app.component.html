@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+
+<ul>
+  <li *ngFor="let test of tests">
+    <label>{{test.caption}}</label>
+    <app-select [test]="test"></app-select>
+  </li>
+</ul>
+
+<app-result></app-result>
