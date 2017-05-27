@@ -75,7 +75,7 @@ module.exports = module.exports.toString();
 /***/ 135:
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"assignment == 1 || assignment == 0\">\n  <h1>Skyeng test assignment 1</h1>\n  <ul>\n    <li *ngFor=\"let test of tests\">\n      <label>{{test.caption}}</label>\n      <app-select [test]=\"test\"></app-select>\n    </li>\n  </ul>\n  <app-result></app-result>\n</div>\n\n<div *ngIf=\"assignment == 2 || assignment == 0\">\n  <h1>Skyeng test assignment #2</h1>\n  <app-translations [translations]=\"translations\"></app-translations>\n</div>\n\n<a href=\"#\"><h3>Source code on Github</h3></a>\n"
+module.exports = "<div *ngIf=\"assignment == 1 || assignment == 0\">\n  <h1>Skyeng test assignment 1</h1>\n  <ul>\n    <li *ngFor=\"let test of tests\">\n      <label>{{test.caption}}</label>\n      <app-select [test]=\"test\"></app-select>\n    </li>\n  </ul>\n  <app-result></app-result>\n</div>\n\n<div *ngIf=\"assignment == 2 || assignment == 0\">\n  <h1>Skyeng test assignment #2</h1>\n  <app-translations [translations]=\"translations\"></app-translations>\n</div>\n\n<h3>View sources on Github</h3>\n<a href=\"https://github.com/RomanLubushkin/skyeng-test-assignment\" target=\"_blank\">https://github.com/RomanLubushkin/skyeng-test-assignment</a>\n"
 
 /***/ }),
 
